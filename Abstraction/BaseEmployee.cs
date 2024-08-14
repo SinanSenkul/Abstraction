@@ -17,15 +17,11 @@ public interface IObjective //defined the interface
     public abstract void Objective(); //Gorev() method has been defined as an abstract 
 }
 
-public class Developer : EmployeeBase, IObjective //developer class, which uses EmployeeBase as base class and IObjective as
-    //interface
+public class Developer : EmployeeBase, IObjective //developer class, which uses EmployeeBase as base class and IObjective as interface
 {
     public string Position { get; set; }
     public Developer(string name, string lastname, string department, string position) : base(name, lastname, department)
     {
-        Name = name;
-        LastName = lastname;
-        Department = department;
         Position = position;
     }
     public void Objective()
@@ -39,13 +35,10 @@ public class SalesSpecialist : EmployeeBase, IObjective
     public string Position { get; set; }
     public SalesSpecialist(string name, string lastname, string department, string position) : base(name, lastname, department)
     {
-        Name = name;
-        LastName = lastname;
-        Department = department;
         Position = position;
     }
     public void Objective()
     {
-        Console.WriteLine($"Merhaba! Adım {Name}, Şirkette developer olarak çalışıyorum");
+        Console.WriteLine($"Merhaba! Adım {Name}, Şirkette satış uzmanı olarak çalışıyorum");
     }
 }
